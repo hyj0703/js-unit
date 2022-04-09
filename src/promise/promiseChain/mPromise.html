@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut ico" href="../../img/icon.ico" >
+  <title>Document</title>
+</head>
+<body>
+  <h1>自己的Promise</h1>
+</body>
+<script type="module">
+  // const MPromise = require('./MPromise.js')
+  import MPromise from './MPromise.js'
+  setTimeout(()=>{
+    console.log(222)
+  })
+  const p = new MPromise((resolve,reject)=>{
+      resolve('success') 
+  })
+  p.then(res=>{
+    console.log(res)
+    return new MPromise(resolve=>{
+      resolve('promise对象')
+    })
+  }).then(res=>{
+    console.log('下一个值',res)
+  })
+</script>
+</html>
