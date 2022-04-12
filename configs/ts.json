@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "../src/typescript/dist",
+    "watch": true,
+    "module": "ES2015",
+    "target":"ES5",
+    "lib":["DOM","ES6","ScriptHost"]
+  },
+  "include": ["../src/typescript/**/*"]
+}
