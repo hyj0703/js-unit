@@ -1,5 +1,5 @@
 type IAllowFileTypeList = 'png'|'gif'|'jpg'|'jpeg'|'webp'
-class User {
+export class User {
   static readonly ALLOW_FILE_TYPE_LIST:Array<IAllowFileTypeList>=['png','gif','jpg','jpeg','webp']
   constructor(
     public id:number,

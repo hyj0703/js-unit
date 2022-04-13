@@ -1,4 +1,4 @@
-class User {
+export class User {
   constructor(
     // 只读，自身，子级，外部都能访问
     readonly id:number,
